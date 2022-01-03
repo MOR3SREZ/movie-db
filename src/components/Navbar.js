@@ -1,12 +1,17 @@
-//styles
 import { Link } from 'react-router-dom';
+
+//styles
 import './Navbar.css';
+import log from '../Assets/rose.png';
+
 const Navbar = () => {
   return (
     <div className='navbar'>
       <nav>
         <div className='logo'>
-          <h1>RoseDB</h1>
+          <Link to='/'>
+            <img src={log} alt='logo' />
+          </Link>
         </div>
         <div className='links'>
           <Link to='/'>Home</Link>

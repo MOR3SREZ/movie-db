@@ -1,5 +1,7 @@
 #root {
   color: #03ce99, #05d09e, #08dcb3;
+  --green: #03ce99;
+  --red: #ba0404;
 }
 * {
   margin: 0;
