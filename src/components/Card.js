@@ -1,7 +1,7 @@
 //styles
 import './Card.css';
 const Card = () => {
-  const url = `https://m.media-amazon.com/images/M/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg`;
+  const url = `https://upload.wikimedia.org/wikipedia/en/7/71/Vikings_Season_2.jpg`;
   return (
     <div className='card'>
       <div className='poster'>

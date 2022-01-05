@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 //styles
 import './Navbar.css';
-import log from '../Assets/rose.png';
+import log from '../Assets/logo-icon.png';
 
 const Navbar = () => {
   return (
