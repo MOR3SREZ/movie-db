@@ -33,21 +33,6 @@ const Genre = () => {
       <SplideSlide>
         <Card />
       </SplideSlide>
-      <SplideSlide>
-        <Card />
-      </SplideSlide>
-      <SplideSlide>
-        <Card />
-      </SplideSlide>
-      <SplideSlide>
-        <Card />
-      </SplideSlide>
-      <SplideSlide>
-        <Card />
-      </SplideSlide>
-      <SplideSlide>
-        <Card />
-      </SplideSlide>
     </Splide>
   );
 };

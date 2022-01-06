@@ -3,13 +3,16 @@
   height: 450px;
   color: #fff;
   display: flex;
+
   flex-direction: column;
   margin: 20px 15px 0px;
 }
 .poster {
-  object-fit: cover;
   position: relative;
   overflow: hidden;
+  width: 220px;
+  height: 350px;
+  object-fit: cover;
 }
 .poster img {
   width: 100%;
@@ -73,9 +76,11 @@
 
 .info {
   margin-top: 10px;
+  height: 85px;
   display: flex;
   border-left: 5px solid var(--green);
   flex-direction: column;
+  justify-content: space-between;
   padding-left: 10px;
 }
 
@@ -88,6 +93,7 @@
 }
 .info-name p {
   font-size: 1.1rem;
+  padding-right: 10px;
 }
 .info-name span {
   color: var(--green);

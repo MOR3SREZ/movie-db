@@ -1,32 +1,40 @@
 //styles
 import './Card.css';
-const Card = () => {
-  const url = `https://upload.wikimedia.org/wikipedia/en/7/71/Vikings_Season_2.jpg`;
+const Card = ({ find }) => {
+  const add3Dots = (string, limit) => {
+    const dots = '...';
+    if (string.length > limit) {
+      string = string.substring(0, limit) + dots;
+    }
+
+    return string;
+  };
+
   return (
     <div className='card'>
       <div className='poster'>
-        <img src={url} alt='Vikings poster' />
-
+        <img src={find.title.image.url} alt={find.title.title} />
         <div className='poster-about'>
-          <p className='about'>
-            Viking is a movie about the great man 'Ragnar' who have a big dream
-            and go to the west for first time and discover new lands
-          </p>
+          <p className='about'>{add3Dots(find.plotOutline.text, 160)}</p>
           <div>
             <p className='rate'>
-              Rate: <span>8.8</span>/10
-            </p>{' '}
-            <p className='age'>+18</p>
+              Rate:{' '}
+              <span>{find.ratings.rating ? find.ratings.rating : '?'}</span>/10
+            </p>
+            <p className='age'>{find.certificates.US[0].certificate}</p>
           </div>
         </div>
       </div>
       <div className='info'>
         <div className='info-name'>
-          <p>vikings</p>
-          <span>2015</span>
+          <p>{find.title.title}</p>
+          <span>{find.releaseDate.slice(0, 4)}</span>
         </div>
         <div className='info-catagory'>
-          <p>action - history - dram</p>
+          <p>
+            {find.genres[0]} - {find.genres[1]} -{' '}
+            {find.genres[2] ? find.genres[2] : null}{' '}
+          </p>
         </div>
       </div>
     </div>
