@@ -14,7 +14,7 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.301);
 }
 
 nav {
@@ -39,7 +39,7 @@ nav {
 .links {
   width: 700px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .links a {
   text-decoration: none;

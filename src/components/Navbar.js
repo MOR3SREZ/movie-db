@@ -15,9 +15,6 @@ const Navbar = () => {
         </div>
         <div className='links'>
           <Link to='/'>Home</Link>
-          <Link to='/movies'>Movie</Link>
-          <Link to='/watchlist'>Watchlist</Link>
-          <Link to='/login'>Login</Link>
         </div>
       </nav>
     </div>
