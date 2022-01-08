@@ -9,12 +9,14 @@ const Navbar = () => {
     <div className='navbar'>
       <nav>
         <div className='logo'>
-          <Link to='/'>
+          {/* <Link to='/'>
             <img src={log} alt='logo' />
-          </Link>
+          </Link> */}
         </div>
         <div className='links'>
-          <Link to='/'>Home</Link>
+          <Link to='/'>Charcters</Link>
+          <Link to='/locations'>Location</Link>
+          <Link to='/episodes'>Episodes</Link>
         </div>
       </nav>
     </div>

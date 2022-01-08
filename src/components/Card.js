@@ -1,42 +1,34 @@
 //styles
+import { useEffect, useState } from 'react';
 import './Card.css';
 const Card = ({ result }) => {
-  // ... Function
-  const add3Dots = (string, limit) => {
-    const dots = '...';
-    if (string.length > limit) {
-      string = string.substring(0, limit) + dots;
-    }
+  const [status, setStatus] = useState('status');
+  useEffect(() => {
+    if (result.status == 'Alive') {
+      setStatus('status-alive');
+    } else if (result.status == 'Dead') {
+      setStatus('dead');
+    } else if (result.status == 'unknown') setStatus('unknown');
+  }, [result]);
 
-    return string;
-  };
-
-  console.log(result);
   return (
     <div className='card'>
       <div className='poster'>
         <img src={result.image} alt='s' />
-        <div className='poster-about'>
-          <p className='about'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
-            dolorum fugit consequuntur voluptas odit illum.
-          </p>
-          <div>
-            <p className='rate'>
-              Rate:
-              <span>9</span>/10
-            </p>
-            <p className='age'>R</p>
-          </div>
+        <div className={`status ${status}`}>
+          <p>{result.status}</p>
         </div>
       </div>
       <div className='info'>
         <div className='info-name'>
           <p>{result.name}</p>
-          <span>2022</span>
         </div>
-        <div className='info-catagory'>
-          <p>fun - fuck - fear</p>
+        <div className='location'>
+          <p>
+            Last Location
+            <br />
+            <span>{result.location.name}</span>
+          </p>
         </div>
       </div>
     </div>

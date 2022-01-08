@@ -5,26 +5,16 @@ import { useFetch } from '../hooks/useFetch';
 import Card from './Card';
 import './Main.css';
 
-const Main = () => {
-  const [url, setUrl] = useState('https://rickandmortyapi.com/api/');
-  const { data, loading, error } = useFetch(
-    'https://rickandmortyapi.com/api/character'
-  );
-
-  console.log(data.results);
-
+const Main = ({ data, loading, error }) => {
   return (
     <div className='main'>
-      <div className='genre-section'>
-        <div className='title'>
-          <div className='genre-name-box'>
-            <h2 className='genre-name'>ACTION</h2>
-          </div>
-        </div>
-      </div>
       <div className='card-section'>
-        {data.results && data.results.map((res) => <Card result={res} />)}
+        {loading && <h1 className='loading'> Loading</h1>}
+        {data.results &&
+          data.results.map((res) => <Card result={res} key={res.id} />)}
+        {error && <h1 className='error'>{error}</h1>}
       </div>
+      <div className='page-prev'></div>
     </div>
   );
 };

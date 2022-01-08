@@ -1,4 +1,6 @@
-.home {
-  /* grid-template-columns: 12px 12px 12px;
-  grid-template-rows: 12px 12px 12px; */
-}
+/* .home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+} */

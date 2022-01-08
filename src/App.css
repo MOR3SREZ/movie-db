@@ -1,7 +1,7 @@
 #root {
   color: #03ce99, #05d09e, #08dcb3;
   --green: #03ce99;
-  --red: #ba0404;
+  --red: #da0037;
 }
 * {
   margin: 0;
@@ -14,9 +14,12 @@
 .App {
   height: 100%;
   width: 100%;
-  background-image: url(Assets/bgDefault.jpg);
+  background-image: url(https://i.ytimg.com/vi/fKSJ_yqtGOw/maxresdefault.jpg);
+  background-attachment: fixed;
   background-size: cover;
-  background-position: fixed;
+  /* 1: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-s5-2-1625139647.jpg */
+  /* 2:https://bloody-disgusting.com/wp-content/uploads/2015/11/119091-rick-and-morty-rick-and-morty.jpg */
+  /* 2:https://i.ytimg.com/vi/fKSJ_yqtGOw/maxresdefault.jpg */
 }
 .App:before {
   content: '';
@@ -25,5 +28,5 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
