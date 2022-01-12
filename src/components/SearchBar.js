@@ -1,16 +1,18 @@
 //styles
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({ setSearch, setSelectPage }) => {
   const [input, setInput] = useState('');
-  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    setSelectPage(1);
+    setSearch(input);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [input, setSearch]);
 
   const submithandler = (e) => {
     e.preventDefault();
-    setValue(input);
-    console.log(input);
-    setInput('');
   };
 
   return (

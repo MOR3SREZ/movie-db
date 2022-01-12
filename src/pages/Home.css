@@ -4,3 +4,45 @@
   flex-direction: column;
   width: 100%;
 } */
+.paginationBtns {
+  display: flex;
+  width: 100%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+.pageLink {
+  padding: 10px 10px;
+}
+.pageBtn,
+.prevBtn,
+.nextBtn {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 5px 0px;
+  cursor: pointer;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  font-weight: 100;
+}
+.pageBtn:hover {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+}
+.prevBtn,
+.nextBtn {
+  padding: 5px 10px;
+}
+
+.paginationActive {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.paginationDisabled a {
+  background-color: rgba(218, 0, 55, 0.5);
+}

@@ -2,32 +2,35 @@
 import { useEffect, useState } from 'react';
 import './Card.css';
 const Card = ({ result }) => {
-  const [status, setStatus] = useState('status');
-  useEffect(() => {
-    if (result.status == 'Alive') {
-      setStatus('status-alive');
-    } else if (result.status == 'Dead') {
-      setStatus('dead');
-    } else if (result.status == 'unknown') setStatus('unknown');
-  }, [result]);
+  const [statusClass, setStatusClass] = useState('status');
 
+  const { status, image, name, location } = result;
+  useEffect(() => {
+    if (status === 'Alive') {
+      setStatusClass('status-alive');
+    } else if (status === 'Dead') {
+      setStatusClass('dead');
+    } else if (status === 'unknown') setStatusClass('unknown');
+  }, [status]);
+
+  console.log(result.species);
   return (
     <div className='card'>
       <div className='poster'>
-        <img src={result.image} alt='s' />
-        <div className={`status ${status}`}>
-          <p>{result.status}</p>
+        <img src={image} alt='s' />
+        <div className={`status ${statusClass}`}>
+          <p>{status}</p>
         </div>
       </div>
       <div className='info'>
         <div className='info-name'>
-          <p>{result.name}</p>
+          <p>{name}</p>
         </div>
         <div className='location'>
           <p>
             Last Location
             <br />
-            <span>{result.location.name}</span>
+            <span>{location.name}</span>
           </p>
         </div>
       </div>

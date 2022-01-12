@@ -24,13 +24,12 @@ export const useFetch = (url) => {
         setLoading(false);
         setData(data);
         setError(null);
-        console.log(data);
       } catch (err) {
         if (err.name === 'AbortError') {
           console.log('the fetch was aborted');
         } else {
           setLoading(false);
-          setError('Could not fetch the data');
+          setError('There is nothing here');
           console.log(err.message);
         }
       }
