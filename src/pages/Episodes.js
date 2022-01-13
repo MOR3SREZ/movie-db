@@ -1,6 +1,5 @@
 //componentes
 import Navbar from '../components/Navbar';
-import Main from '../components/Main';
 import { useFetch } from '../hooks/useFetch';
 //styles
 import './Episodes.css';

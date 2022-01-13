@@ -1,8 +1,13 @@
 //styles
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+
+//components
+import { FilterContext } from '../Context/CatagoryContext';
+//style
 import './SearchBar.css';
 
-const SearchBar = ({ setSearch, setSelectPage }) => {
+const SearchBar = ({ setSearch }) => {
+  const { setSelectPage } = useContext(FilterContext);
   const [input, setInput] = useState('');
 
   useEffect(() => {

@@ -1,0 +1,22 @@
+.filter-btn {
+  margin: 10px;
+}
+
+.filter-input {
+  display: none;
+}
+.filter-label {
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(50px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  padding: 2px 10px;
+}
+
+.filter-input:checked + .filter-label {
+  background-color: rgba(218, 0, 55, 0.5);
+}

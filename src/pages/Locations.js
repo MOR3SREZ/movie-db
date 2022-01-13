@@ -2,10 +2,10 @@
 import Navbar from '../components/Navbar';
 
 import { useFetch } from '../hooks/useFetch';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SearchBar from '../components/SearchBar';
 import ReactPaginate from 'react-paginate';
-import Filter from '../components/Filter';
+import Filter from '../components/Filter/Filter';
 import Main from '../components/Main';
 
 //styles
@@ -13,35 +13,19 @@ import Main from '../components/Main';
 import './Locations.css';
 
 const Locations = () => {
-  const [url, setUrl] = useState('https://rickandmortyapi.com/api/character');
+  // const [url, setUrl] = useState('https://rickandmortyapi.com/api/location');
+  // const [location, setLocation] = useState([]);
 
-  const { data, loading, error } = useFetch(url);
+  // const { data, loading, error } = useFetch(url);
+  // const { results, info } = data;
+  // useEffect(() => {
+  //   results?.map((item) => setLocation((prev) => [...prev, item.name]));
+  // }, [results]);
 
-  const changePage = ({ selected }) => {
-    setUrl(`https://rickandmortyapi.com/api/character?page=${selected + 1}`);
-  };
-
+  // console.log(location);
   return (
     <div>
       <Navbar />
-      <SearchBar setUrl={setUrl} />
-      <Filter />
-      <Main data={data} loading={loading} error={error} key={'c'} />
-      {!error && (
-        <ReactPaginate
-          previousLabel={'prev'}
-          nextLabel={'next'}
-          pageCount={42}
-          onPageChange={changePage}
-          containerClassName={'paginationBtns'}
-          pageClassName={'pageBtn'}
-          pageLinkClassName={'pageLink'}
-          previousLinkClassName={'prevBtn'}
-          nextLinkClassName={'nextBtn'}
-          disabledClassName={'paginationDisabled'}
-          activeClassName={'paginationActive'}
-        />
-      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useContext } from 'react';
 import { useFetch } from '../hooks/useFetch';
 
 //components
@@ -6,22 +6,23 @@ import Main from '../components/Main';
 import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
 import ReactPaginate from 'react-paginate';
-import Filter from '../components/Filter';
+import Filter from '../components/Filter/Filter';
+import { FilterContext } from '../Context/CatagoryContext';
 
 //styles
 import './Home.css';
 
 const Home = () => {
+  const { status, species, gender, setSelectPage, selectPage } =
+    useContext(FilterContext);
+
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(1);
-  const [selectPage, setSelectPage] = useState('');
 
-  const [url, setUrl] = useState(`https://rickandmortyapi.com/api/character`);
+  const [url, setUrl] = useState(
+    `https://rickandmortyapi.com/api/character/?page=&name=&status=&gender=&type=`
+  );
   const { data, loading, error } = useFetch(url);
-
-  useEffect(() => {
-    setPage(data.info?.pages);
-  }, [setPage, data]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const changePage = useCallback(({ selected }) => {
@@ -30,16 +31,18 @@ const Home = () => {
 
   useEffect(() => {
     setUrl(
-      `https://rickandmortyapi.com/api/character/${'?page=' + selectPage}&${
-        'name=' + search
-      }`
+      `https://rickandmortyapi.com/api/character/?page=${selectPage}&name=${search}&gender=${gender}&status=${status}&species=${species}`
     );
-  }, [search, changePage, selectPage]);
+    setPage(data.info?.pages);
+  }, [search, changePage, selectPage, status, species, gender, data]);
+
+  console.log(data?.results);
+  console.log(gender);
 
   return (
     <div className='home'>
       <Navbar />
-      <SearchBar setSearch={setSearch} setSelectPage={setSelectPage} />
+      <SearchBar setSearch={setSearch} />
       <Filter />
       <Main data={data} loading={loading} error={error} key={'c'} />
 
@@ -48,7 +51,7 @@ const Home = () => {
           previousLabel={'prev'}
           nextLabel={'next'}
           pageCount={page}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={3}
           onPageChange={changePage}
           containerClassName={'paginationBtns'}
           pageClassName={'pageBtn'}

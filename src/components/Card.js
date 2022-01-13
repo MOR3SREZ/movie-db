@@ -13,7 +13,6 @@ const Card = ({ result }) => {
     } else if (status === 'unknown') setStatusClass('unknown');
   }, [status]);
 
-  console.log(result.species);
   return (
     <div className='card'>
       <div className='poster'>
