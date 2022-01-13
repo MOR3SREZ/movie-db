@@ -1,12 +1,12 @@
 // compnents
 import Navbar from '../components/Navbar';
 
-import { useFetch } from '../hooks/useFetch';
-import { useState, useEffect } from 'react';
-import SearchBar from '../components/SearchBar';
-import ReactPaginate from 'react-paginate';
-import Filter from '../components/Filter/Filter';
-import Main from '../components/Main';
+// import { useFetch } from '../hooks/useFetch';
+// import { useState, useEffect } from 'react';
+// import SearchBar from '../components/SearchBar';
+// import ReactPaginate from 'react-paginate';
+// import Filter from '../components/Filter/Filter';
+// import Main from '../components/Main';
 
 //styles
 
