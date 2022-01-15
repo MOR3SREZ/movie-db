@@ -1,3 +1,31 @@
 .location-page {
   min-height: 100vh;
 }
+
+.title {
+  text-align: center;
+  margin: 2rem auto;
+  width: 50%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2);
+}
+.title h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--rick1);
+}
+.title h2 span {
+  color: var(--morty);
+}
+.title p {
+  color: var(--default2);
+}
+
+.location-main {
+  display: flex;
+  flex-direction: row;
+}

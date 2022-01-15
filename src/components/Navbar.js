@@ -9,9 +9,12 @@ const Navbar = () => {
     <div className='navbar'>
       <nav>
         <div className='logo'>
-          {/* <Link to='/'>
-            <img src={log} alt='logo' />
-          </Link> */}
+          <Link to='/'>
+            <h2>
+              <span className='rick'>Rick</span> <small>&</small>{' '}
+              <span className='morty'>Morty</span>
+            </h2>
+          </Link>
         </div>
         <div className='links'>
           <Link to='/'>Charcters</Link>

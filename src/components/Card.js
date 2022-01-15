@@ -27,9 +27,9 @@ const Card = ({ result }) => {
         </div>
         <div className='location'>
           <p>
-            Last Location
+            <span className='location-span1'>Last Location:</span>
             <br />
-            <span>{location.name}</span>
+            <span className='location-span2'>{location.name}</span>
           </p>
         </div>
       </div>

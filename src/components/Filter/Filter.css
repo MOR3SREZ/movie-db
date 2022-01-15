@@ -1,16 +1,96 @@
 .filter {
   display: flex;
-  width: 50%;
+  width: 70%;
   margin: 0px auto;
-  /* height: 200px; */
-  padding: 20px;
-  justify-content: center;
+  padding: 10px;
+  justify-content: space-around;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
 
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(50px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2);
+  z-index: 20;
+}
+.filter-status,
+.filter-gender,
+.filter-species {
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.temp {
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--black);
+  background-color: rgba(252, 249, 120, 0);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* background-color: var(--morty); */
+  backdrop-filter: blur(50px);
+
+  width: 150px;
+  text-align: center;
+  z-index: 5;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  bottom: 50%;
+  right: 10px;
+  margin: auto 0;
+  text-align: center;
+  transform-origin: center;
+  z-index: 6;
+  color: var(--black);
+  transition: 0.3s transform ease;
+}
+.arrow.show {
+  transform-origin: center;
+  transform: rotateZ(90deg);
+}
+
+.item {
+  background-color: rgba(255, 255, 255, 0);
+  /* -moz-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+  position: absolute;
+  margin: 0 auto;
+  max-height: 200px;
+  top: -40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 99;
+  animation: scale 0.5s forwards;
+}
+.hidden + .item {
+  display: none;
+}
+
+.filter-gender .item {
+  width: 200px;
+}
+.filter-species .item {
+  width: 400px;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1) translateY(100px);
+  }
 }
