@@ -1,9 +1,6 @@
-/* .home {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-} */
+.home {
+  min-height: 100vh;
+}
 .paginationBtns {
   display: flex;
   width: 100%;

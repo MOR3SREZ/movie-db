@@ -23,6 +23,7 @@ const Home = () => {
     `https://rickandmortyapi.com/api/character/?page=&name=&status=&gender=&type=`
   );
   const { data, loading, error } = useFetch(url);
+  const { results } = data;
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const changePage = useCallback(({ selected }) => {
@@ -36,15 +37,12 @@ const Home = () => {
     setPage(data.info?.pages);
   }, [search, changePage, selectPage, status, species, gender, data]);
 
-  console.log(data?.results);
-  console.log(gender);
-
   return (
     <div className='home'>
       <Navbar />
       <SearchBar setSearch={setSearch} />
       <Filter />
-      <Main data={data} loading={loading} error={error} key={'c'} />
+      <Main data={results} loading={loading} error={error} key={'c'} />
 
       {!error && (
         <ReactPaginate

@@ -5,10 +5,6 @@ export const useFetch = (url) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // const fetchData =  () => {
-
-  // };
-
   useEffect(() => {
     const controller = new AbortController();
 

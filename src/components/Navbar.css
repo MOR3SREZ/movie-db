@@ -6,6 +6,8 @@
   position: -webkit-sticky;
   top: 0px;
   z-index: 10;
+  font-family: 'Fredoka One', cursive;
+  z-index: 100;
 }
 .navbar:before {
   content: '';
@@ -27,21 +29,27 @@ nav {
   align-items: center;
   padding: 10px;
 }
-/* 
-.logo {
-  width: 75px;
-  height: 75px;
-/* } 
- .logo img {
-  width: 100%;
-  height: 100%;
-} */
+.logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.logo .rick {
+  color: var(--rick1);
+}
+.logo .morty {
+  color: var(--morty);
+}
+.logo small {
+  color: #fff;
+}
 
 .links {
   width: 500px;
   display: flex;
   justify-content: space-around;
 }
+
 .links a {
   text-decoration: none;
   color: #fff;
@@ -51,5 +59,8 @@ nav {
 }
 
 .links a:hover {
-  color: #03ce99;
+  color: var(--default2);
+}
+.links a:active {
+  color: var(--default2);
 }

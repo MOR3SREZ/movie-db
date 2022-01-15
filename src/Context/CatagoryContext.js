@@ -7,12 +7,12 @@ export function FilterProvider({ children }) {
   const [species, setSpecies] = useState('');
   const [gender, setGender] = useState('');
   const [selectPage, setSelectPage] = useState(1);
-
   const filterCleaner = () => {
     setStatus('');
     setSpecies('');
     setGender('');
     setSelectPage('');
+    window.location.reload(false);
   };
 
   return (

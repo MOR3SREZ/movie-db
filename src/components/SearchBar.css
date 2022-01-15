@@ -8,20 +8,35 @@
 }
 
 .search-bar input {
-  background-color: rgba(256, 256, 256, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(8px);
-  border: none;
-  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 15px;
   width: 500px;
   border-radius: 25px;
   outline: none;
+  color: var(--rick1);
+}
+.search-bar input:focus,
+.search-bar input:hover {
+  box-shadow: 0px 0px 3px 0px var(--rick1);
+}
+
+.search-bar input::placeholder {
+  color: var(--rick1);
 }
 
 .search-bar button {
-  background-color: rgba(218, 0, 55, 0.5);
+  background-color: var(--rick1);
   backdrop-filter: blur(8px);
-  border: none;
+  border: 1px solid var(--rick1);
+  color: var(--black);
+  margin-left: 5px;
   padding: 10px 15px;
   border-radius: 25px;
   cursor: pointer;
+}
+.search-bar button:hover {
+  background-color: var(--black);
+  color: var(--rick1);
 }

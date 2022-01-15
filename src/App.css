@@ -1,25 +1,36 @@
 #root {
-  color: #03ce99, #05d09e, #08dcb3;
   --green: #03ce99;
-  --red: #da0037;
+  --black: #2f3337;
+  --rick1: #a3dddd;
+  --rick2: #b4d9ec;
+  --morty: #fcf978;
+  --default: #4fcb24;
+  --default2: #47e51b;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Fredoka One', cursive;
   position: relative;
 }
 
 .App {
+  scroll-behavior: smooth;
   height: 100%;
-  width: 100%;
-  background-image: url(https://i.ytimg.com/vi/fKSJ_yqtGOw/maxresdefault.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-image: url(https://bloody-disgusting.com/wp-content/uploads/2015/11/119091-rick-and-morty-rick-and-morty.jpg);
   background-attachment: fixed;
   background-size: cover;
   /* 1: https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rick-and-morty-s5-2-1625139647.jpg */
   /* 2:https://bloody-disgusting.com/wp-content/uploads/2015/11/119091-rick-and-morty-rick-and-morty.jpg */
   /* 2:https://i.ytimg.com/vi/fKSJ_yqtGOw/maxresdefault.jpg */
+  /* https://livewallpaperhd.com/wp-content/uploads/2017/08/Rick-And-Morty-Wallpaper-HD.jpg */
+  /* https://1.bp.blogspot.com/-MqAaujbA00M/W0vPdFLp8jI/AAAAAAAAHug/oen0HzB02Dw9w8mUOX28kHsZpxKg4tx7QCLcBGAs/s1600/Rick%2B%2526%2BMorty.jpg */
 }
 .App:before {
   content: '';
@@ -29,4 +40,10 @@
   left: 0px;
   right: 0px;
   backdrop-filter: blur(5px);
+}
+
+.loading {
+  display: inline-block;
+  color: #fff;
+  font-size: 3rem;
 }

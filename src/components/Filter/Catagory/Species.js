@@ -21,8 +21,6 @@ const Species = () => {
   ];
   return (
     <div className='container'>
-      <h2>Species</h2>
-
       <div className='buttons'>
         {species.map((item, idx) => (
           <FilterBtn item={item} key={idx} idx={idx} name='species' />
