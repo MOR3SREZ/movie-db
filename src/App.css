@@ -20,7 +20,9 @@
 .App {
   scroll-behavior: smooth;
   height: 100%;
-  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
   background-image: url(https://bloody-disgusting.com/wp-content/uploads/2015/11/119091-rick-and-morty-rick-and-morty.jpg);
   background-attachment: fixed;
   background-size: cover;

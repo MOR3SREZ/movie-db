@@ -38,9 +38,9 @@ const Episodes = () => {
         <h2>
           {name ? name : 'Unknown'}
           {' : '}
-          {`(${episode ? episode : 'Unknown'})`}
+          <span>{`(${episode ? episode : 'Unknown'})`}</span>
         </h2>
-        <p>{air_date ? air_date : 'Unknown'}</p>
+        <p>Air date: {air_date ? air_date : 'Unknown'}</p>
       </div>
       <div className='location-main'>
         <Select count={51} setId={setId} name='Episode' />

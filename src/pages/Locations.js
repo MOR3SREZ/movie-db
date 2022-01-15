@@ -40,7 +40,7 @@ const Locations = () => {
           {' : '}
           <span>{`(${type ? type : 'Unknown'})`}</span>
         </h2>
-        <p> Dimension: {dimension}</p>
+        <p> Type: {dimension}</p>
       </div>
       <div className='location-main'>
         <Select count={126} setId={setId} name='Location' />

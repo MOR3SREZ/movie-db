@@ -12,6 +12,7 @@ const Select = ({ count, setId, name }) => {
         id='location'
         onChange={(e) => locationHandler(e)}
       >
+        <option>Search for {name}</option>
         {[...Array(count).keys()].map((num) => (
           <option value={num + 1} key={`loc ${num}`}>
             {name} - {num + 1}
